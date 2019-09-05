@@ -19,6 +19,7 @@
             "preLaunchTask": "build",
             "env": {
                 "CW_ENV": "dev",
+                "CW_MODE": "REMOTE",
                 "NODE_TLS_REJECT_UNAUTHORIZED": "0"
             }
         },

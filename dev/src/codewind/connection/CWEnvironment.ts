@@ -85,7 +85,8 @@ namespace CWEnvironment {
         }
         const workspace = MCUtil.containerPathToFsPath(rawWorkspace);
         const version = CWEnvironment.getVersionNumber(rawEnv);
-        const remote = true;
+        const remote = process.env.CW_MODE === "REMOTE";
+
 
         // normalize namespace so it doesn't start with '/'
         const socketNamespace = rawSocketNS.startsWith("/") ? rawSocketNS.substring(1, rawSocketNS.length) : rawSocketNS;
